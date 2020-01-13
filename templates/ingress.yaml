@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: node
+spec:
+  rules:
+    - host: skaffold-nodejs.apps.stack.cloud-account.superhub.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: node
+              servicePort: 80

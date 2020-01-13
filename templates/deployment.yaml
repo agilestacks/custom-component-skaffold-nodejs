@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node
+spec:
+  selector:
+    matchLabels:
+      app: node
+  template:
+    metadata:
+      labels:
+        app: node
+    spec:
+      containers:
+        - name: node
+          image: eu.gcr.io/superhub/skaffold-nodejs
+          ports:
+            - containerPort: 3000

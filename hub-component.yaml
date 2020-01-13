@@ -1,0 +1,39 @@
+---
+# This is Automation Hub component deployment manifest
+version: 1
+kind: component
+meta:
+  name: skaffold-nodejs
+  source:
+    dir: .
+
+requires:
+  - kubernetes
+
+provides: []
+
+lifecycle:
+  verbs:
+    - deploy
+    - undeploy
+
+parameters:
+  - name: dns.domain
+    env: DOMAIN_NAME
+  - name: component.ingress.ssoFqdn
+  - name: component.ingress.protocol
+  - name: component.skaffold-nodejs.image
+    value: ${component.docker.registry.image}
+  - name: component.skaffold-nodejs.name
+    value: skaffold-nodejs
+    env: COMPONENT_NAME
+  - name: component.skaffold-nodejs.namespace
+    value: default
+    env: SKAFFOLD_NAMESPACE
+
+outputs: []
+
+templates:
+  files:
+    - skaffold.yaml.template
+    - templates/*.template
