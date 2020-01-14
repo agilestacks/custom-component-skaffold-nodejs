@@ -36,7 +36,10 @@ parameters:
     value: default
     env: SKAFFOLD_NAMESPACE
 
-outputs: []
+outputs:
+  - name: component.skaffold-nodejs.url
+    brief: App URL
+    value: ${component.ingress.protocol}://${component.skaffold-nodejs.name}.${component.ingress.ssoFqdn}
 
 templates:
   files:
