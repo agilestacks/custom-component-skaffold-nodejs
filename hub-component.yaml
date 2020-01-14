@@ -4,6 +4,10 @@ version: 1
 kind: component
 meta:
   name: skaffold-nodejs
+  title: Skaffold / Node.js
+  brief: Kubernetes App with Skaffold and Node.js
+  icon: https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg
+  license: MIT
   source:
     dir: .
 
