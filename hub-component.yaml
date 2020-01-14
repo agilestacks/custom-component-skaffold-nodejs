@@ -9,6 +9,7 @@ meta:
 
 requires:
   - kubernetes
+  - docker-registry
 
 provides: []
 
