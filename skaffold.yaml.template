@@ -1,8 +1,10 @@
 apiVersion: skaffold/v2alpha1
 kind: Config
 build:
-  # cluster:
-  #   namespace: automation-tasks
+  cluster:
+    namespace: automation-tasks
+    dockerConfig:
+      path: docker.json
   artifacts:
     - image: ${component.skaffold-nodejs.image}
       context: backend

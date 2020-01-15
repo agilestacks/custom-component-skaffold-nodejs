@@ -29,6 +29,7 @@ parameters:
   - name: component.ingress.protocol
   - name: component.skaffold-nodejs.image
     value: ${component.docker.registry.image}
+  - name: component.docker.auth.host
   - name: component.skaffold-nodejs.name
     value: skaffold-nodejs
     env: COMPONENT_NAME
@@ -44,4 +45,5 @@ outputs:
 templates:
   files:
     - skaffold.yaml.template
+    - docker.json.template
     - templates/*.template

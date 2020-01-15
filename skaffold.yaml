@@ -1,6 +1,7 @@
 apiVersion: skaffold/v2alpha1
 kind: Config
 build:
+  local: {}
   artifacts:
     - image: eu.gcr.io/superhub/skaffold-nodejs
       context: backend
