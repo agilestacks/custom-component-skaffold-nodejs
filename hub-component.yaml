@@ -36,6 +36,9 @@ parameters:
   - name: component.skaffold-nodejs.namespace
     value: default
     env: SKAFFOLD_NAMESPACE
+  - name: component.skaffold-nodejs.verbosity
+    value: info
+    env: SKAFFOLD_VERBOSITY
 
 outputs:
   - name: component.skaffold-nodejs.url
