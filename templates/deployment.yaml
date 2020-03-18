@@ -12,7 +12,7 @@ spec:
         app: node
     spec:
       containers:
-        - name: node
-          image: eu.gcr.io/superhub/skaffold-nodejs
-          ports:
-            - containerPort: 3000
+      - name: node
+        image: eu.gcr.io/superhub/skaffold-nodejs
+        ports:
+        - containerPort: 3000

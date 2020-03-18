@@ -6,15 +6,15 @@ build:
     dockerConfig:
       path: docker.json
   artifacts:
-    - image: ${component.skaffold-nodejs.image}
-      context: backend
-      sync:
-        manual:
-        # Sync all the javascript files that are in the src folder
-        # with the container src folder
-        - src: 'src/**/*.js'
-          dest: .
+  - image: ${component.skaffold-nodejs.image}
+    context: backend
+    sync:
+      manual:
+      # Sync all the javascript files that are in the src folder
+      # with the container src folder
+      - src: 'src/**/*.js'
+        dest: .
 deploy:
   kubectl:
     manifests:
-     - templates/*.yaml
+    - templates/*.yaml

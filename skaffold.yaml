@@ -3,15 +3,15 @@ kind: Config
 build:
   local: {}
   artifacts:
-    - image: eu.gcr.io/superhub/skaffold-nodejs
-      context: backend
-      sync:
-        manual:
-        # Sync all the javascript files that are in the src folder
-        # with the container src folder
-        - src: 'src/**/*.js'
-          dest: .
+  - image: eu.gcr.io/superhub/skaffold-nodejs
+    context: backend
+    sync:
+      manual:
+      # Sync all the javascript files that are in the src folder
+      # with the container src folder
+      - src: 'src/**/*.js'
+        dest: .
 deploy:
   kubectl:
     manifests:
-     - templates/*.yaml
+    - templates/*.yaml

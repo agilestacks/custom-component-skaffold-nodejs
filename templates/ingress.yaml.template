@@ -4,10 +4,10 @@ metadata:
   name: node
 spec:
   rules:
-    - host: ${component.skaffold-nodejs.name}.${component.ingress.ssoFqdn}
-      http:
-        paths:
-          - path: /
-            backend:
-              serviceName: node
-              servicePort: 80
+  - host: ${component.skaffold-nodejs.name}.${component.ingress.ssoFqdn}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: node
+          servicePort: 80
